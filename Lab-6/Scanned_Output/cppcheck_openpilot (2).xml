@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="2.7"/>
+    <errors>
+        <error id="unassignedVariable" severity="style" msg="Variable &apos;sub_sock&apos; is not assigned a value." verbose="Variable &apos;sub_sock&apos; is not assigned a value." cwe="665" file0="openpilot/cereal/messaging/bridge.cc">
+            <location file="openpilot/cereal/messaging/bridge.cc" line="53" column="15"/>
+            <symbol>sub_sock</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;FileLock&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;FileLock&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="openpilot/common/params.cc">
+            <location file="openpilot/common/params.cc" line="79" column="3"/>
+            <symbol>FileLock</symbol>
+        </error>
+        <error id="unassignedVariable" severity="style" msg="Variable &apos;k&apos; is not assigned a value." verbose="Variable &apos;k&apos; is not assigned a value." cwe="665" file0="openpilot/common/tests/test_util.cc">
+            <location file="openpilot/common/tests/test_util.cc" line="92" column="15"/>
+            <symbol>k</symbol>
+        </error>
+        <error id="constStatement" severity="warning" msg="Found suspicious operator &apos;,&apos;" verbose="Found suspicious operator &apos;,&apos;" cwe="398" file0="openpilot/common/transformations/coordinates.cc">
+            <location file="openpilot/common/transformations/coordinates.cc" line="72" column="18"/>
+        </error>
+        <error id="redundantInitialization" severity="style" msg="Redundant initialization for &apos;z2&apos;. The initialized value is overwritten before it is read." verbose="Redundant initialization for &apos;z2&apos;. The initialized value is overwritten before it is read." cwe="563" file0="openpilot/common/transformations/orientation.cc">
+            <location file="openpilot/common/transformations/orientation.cc" line="99" column="6" info="z2 is overwritten"/>
+            <location file="openpilot/common/transformations/orientation.cc" line="85" column="22" info="z2 is initialized"/>
+            <symbol>z2</symbol>
+        </error>
+        <error id="redundantInitialization" severity="style" msg="Redundant initialization for &apos;z2&apos;. The initialized value is overwritten before it is read." verbose="Redundant initialization for &apos;z2&apos;. The initialized value is overwritten before it is read." cwe="563" file0="openpilot/common/transformations/orientation.cc">
+            <location file="openpilot/common/transformations/orientation.cc" line="138" column="6" info="z2 is overwritten"/>
+            <location file="openpilot/common/transformations/orientation.cc" line="124" column="22" info="z2 is initialized"/>
+            <symbol>z2</symbol>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;cores&apos; should be passed by const reference." verbose="Parameter &apos;cores&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="openpilot/common/util.cc">
+            <location file="openpilot/common/util.cc" line="50" column="40"/>
+            <symbol>cores</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;in&apos; can be declared with const" verbose="Parameter &apos;in&apos; can be declared with const" cwe="398" file0="openpilot/selfdrive/modeld/transforms/loadyuv.cl">
+            <location file="openpilot/selfdrive/modeld/transforms/loadyuv.cl" line="40" column="38" info="Parameter &apos;in&apos; can be declared with const"/>
+            <symbol>in</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;M&apos; can be declared with const" verbose="Parameter &apos;M&apos; can be declared with const" cwe="398" file0="openpilot/selfdrive/modeld/transforms/transform.cl">
+            <location file="openpilot/selfdrive/modeld/transforms/transform.cl" line="12" column="50" info="Parameter &apos;M&apos; can be declared with const"/>
+            <symbol>M</symbol>
+        </error>
+        <error id="exceptRethrowCopy" severity="style" msg="Throwing a copy of the caught exception instead of rethrowing the original exception." verbose="Rethrowing an exception with &apos;throw e;&apos; creates an unnecessary copy of &apos;e&apos;. To rethrow the caught exception without unnecessary copying or slicing, use a bare &apos;throw;&apos;." cwe="398" file0="openpilot/selfdrive/pandad/panda.cc">
+            <location file="openpilot/selfdrive/pandad/panda.cc" line="25" column="5"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;last_driver_camera_t&apos; can be reduced." verbose="The scope of the variable &apos;last_driver_camera_t&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="openpilot/selfdrive/pandad/pandad.cc">
+            <location file="openpilot/selfdrive/pandad/pandad.cc" line="370" column="19"/>
+            <symbol>last_driver_camera_t</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;prev_fan_speed&apos; can be reduced." verbose="The scope of the variable &apos;prev_fan_speed&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="openpilot/selfdrive/pandad/pandad.cc">
+            <location file="openpilot/selfdrive/pandad/pandad.cc" line="371" column="19"/>
+            <symbol>prev_fan_speed</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ir_pwr&apos; can be reduced." verbose="The scope of the variable &apos;ir_pwr&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="openpilot/selfdrive/pandad/pandad.cc">
+            <location file="openpilot/selfdrive/pandad/pandad.cc" line="372" column="14"/>
+            <symbol>ir_pwr</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;prev_ir_pwr&apos; can be reduced." verbose="The scope of the variable &apos;prev_ir_pwr&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="openpilot/selfdrive/pandad/pandad.cc">
+            <location file="openpilot/selfdrive/pandad/pandad.cc" line="373" column="14"/>
+            <symbol>prev_ir_pwr</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;pandas&apos; can be declared with const" verbose="Parameter &apos;pandas&apos; can be declared with const" cwe="398" file0="openpilot/selfdrive/pandad/pandad.cc">
+            <location file="openpilot/selfdrive/pandad/pandad.cc" line="325" column="48" info="Parameter &apos;pandas&apos; can be declared with const"/>
+            <symbol>pandas</symbol>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::any_of algorithm instead of a raw loop." verbose="Consider using std::any_of algorithm instead of a raw loop." cwe="398" file0="openpilot/selfdrive/pandad/pandad.cc">
+            <location file="openpilot/selfdrive/pandad/pandad.cc" line="47" column="30"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::any_of, std::all_of, std::none_of, or std::accumulate algorithm instead of a raw loop." verbose="Consider using std::any_of, std::all_of, std::none_of, or std::accumulate algorithm instead of a raw loop." cwe="398" file0="openpilot/selfdrive/pandad/pandad.cc">
+            <location file="openpilot/selfdrive/pandad/pandad.cc" line="118" column="21"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::transform algorithm instead of a raw loop." verbose="Consider using std::transform algorithm instead of a raw loop." cwe="398" file0="openpilot/selfdrive/pandad/pandad.cc">
+            <location file="openpilot/selfdrive/pandad/pandad.cc" line="328" column="23"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::any_of, std::all_of, std::none_of, or std::accumulate algorithm instead of a raw loop." verbose="Consider using std::any_of, std::all_of, std::none_of, or std::accumulate algorithm instead of a raw loop." cwe="398" file0="openpilot/selfdrive/pandad/pandad.cc">
+            <location file="openpilot/selfdrive/pandad/pandad.cc" line="342" column="23"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ret&apos; can be reduced." verbose="The scope of the variable &apos;ret&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="openpilot/selfdrive/pandad/spi.cc">
+            <location file="openpilot/selfdrive/pandad/spi.cc" line="59" column="7"/>
+            <symbol>ret</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;uid&apos; can be reduced." verbose="The scope of the variable &apos;uid&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="openpilot/selfdrive/pandad/spi.cc">
+            <location file="openpilot/selfdrive/pandad/spi.cc" line="61" column="11"/>
+            <symbol>uid</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;data&apos; can be declared with const" verbose="Parameter &apos;data&apos; can be declared with const" cwe="398" file0="openpilot/selfdrive/pandad/spi.cc">
+            <location file="openpilot/selfdrive/pandad/spi.cc" line="197" column="30" info="Parameter &apos;data&apos; can be declared with const"/>
+            <symbol>data</symbol>
+        </error>
+        <error id="comparePointers" severity="error" msg="Subtracting pointers that point to different objects" verbose="Subtracting pointers that point to different objects" cwe="570" file0="openpilot/selfdrive/ui/installer/installer.cc">
+            <location file="openpilot/selfdrive/ui/installer/installer.cc" line="179" column="33"/>
+            <location file="openpilot/selfdrive/ui/installer/installer.cc" line="179" column="35" info="Array decayed to pointer here."/>
+            <location file="openpilot/selfdrive/ui/installer/installer.cc" line="34" column="22" info="Variable declared here."/>
+            <location file="openpilot/selfdrive/ui/installer/installer.cc" line="179" column="16" info="Array decayed to pointer here."/>
+            <location file="openpilot/selfdrive/ui/installer/installer.cc" line="35" column="22" info="Variable declared here."/>
+        </error>
+        <error id="comparePointers" severity="error" msg="Subtracting pointers that point to different objects" verbose="Subtracting pointers that point to different objects" cwe="570" file0="openpilot/selfdrive/ui/installer/installer.cc">
+            <location file="openpilot/selfdrive/ui/installer/installer.cc" line="193" column="62"/>
+            <location file="openpilot/selfdrive/ui/installer/installer.cc" line="193" column="64" info="Array decayed to pointer here."/>
+            <location file="openpilot/selfdrive/ui/installer/installer.cc" line="36" column="22" info="Variable declared here."/>
+            <location file="openpilot/selfdrive/ui/installer/installer.cc" line="193" column="48" info="Array decayed to pointer here."/>
+            <location file="openpilot/selfdrive/ui/installer/installer.cc" line="37" column="22" info="Variable declared here."/>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;s&apos; should be passed by const reference." verbose="Parameter &apos;s&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="openpilot/selfdrive/ui/installer/installer.cc">
+            <location file="openpilot/selfdrive/ui/installer/installer.cc" line="14" column="39"/>
+            <symbol>s</symbol>
+        </error>
+        <error id="unassignedVariable" severity="style" msg="Variable &apos;key&apos; is not assigned a value." verbose="Variable &apos;key&apos; is not assigned a value." cwe="665" file0="openpilot/selfdrive/ui/installer/installer.cc">
+            <location file="openpilot/selfdrive/ui/installer/installer.cc" line="164" column="21"/>
+            <symbol>key</symbol>
+        </error>
+        <error id="redundantInitialization" severity="style" msg="Redundant initialization for &apos;nm.call&apos;. The initialized value is overwritten before it is read." verbose="Redundant initialization for &apos;nm.call&apos;. The initialized value is overwritten before it is read." cwe="563" file0="openpilot/selfdrive/ui/qt/network/wifi_manager.cc">
+            <location file="openpilot/selfdrive/ui/qt/network/wifi_manager.cc" line="18" column="25" info="nm.call is overwritten"/>
+            <location file="openpilot/selfdrive/ui/qt/network/wifi_manager.cc" line="18" column="25" info="nm.call is initialized"/>
+            <symbol>nm.call</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;sm&apos; can be reduced." verbose="The scope of the variable &apos;sm&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="openpilot/selfdrive/ui/qt/onroad/annotated_camera.cc">
+            <location file="openpilot/selfdrive/ui/qt/onroad/annotated_camera.cc" line="92" column="14"/>
+            <symbol>sm</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;l&apos; can be declared with const" verbose="Parameter &apos;l&apos; can be declared with const" cwe="398" file0="openpilot/selfdrive/ui/qt/widgets/offroad_alerts.cc">
+            <location file="openpilot/selfdrive/ui/qt/widgets/offroad_alerts.cc" line="85" column="55" info="Parameter &apos;l&apos; can be declared with const"/>
+            <symbol>l</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;r&apos; can be declared with const" verbose="Parameter &apos;r&apos; can be declared with const" cwe="398" file0="openpilot/selfdrive/ui/qt/widgets/offroad_alerts.cc">
+            <location file="openpilot/selfdrive/ui/qt/widgets/offroad_alerts.cc" line="85" column="64" info="Parameter &apos;r&apos; can be declared with const"/>
+            <symbol>r</symbol>
+        </error>
+        <error id="stlIfStrFind" severity="performance" msg="Inefficient usage of string::find() in condition; string::starts_with() could be faster." verbose="Either inefficient or wrong usage of string::find(). string::starts_with() will be faster if string::find&apos;s result is compared with 0, because it will not scan the whole string. If your intention is to check that there are no findings in the string, you should compare with std::string::npos." cwe="597" file0="openpilot/system/camerad/cameras/camera_common.cc">
+            <location file="openpilot/system/camerad/cameras/camera_common.cc" line="107" column="9"/>
+        </error>
+        <error id="duplicateExpression" severity="style" msg="Same expression on both sides of &apos;/&apos;." verbose="Finding the same expression on both sides of an operator is suspicious and might indicate a cut and paste or logic error. Please examine this code carefully to determine if it is correct." cwe="398" file0="openpilot/system/camerad/cameras/camera_qcom2.cc">
+            <location file="openpilot/system/camerad/cameras/camera_qcom2.cc" line="136" column="26"/>
+            <location file="openpilot/system/camerad/cameras/camera_qcom2.cc" line="133" column="24" info="&apos;ts_ev&apos; is assigned value &apos;0.05&apos; here."/>
+            <location file="openpilot/system/camerad/cameras/camera_qcom2.cc" line="130" column="21" info="&apos;dt&apos; is assigned value &apos;0.05&apos; here."/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::find_if algorithm instead of a raw loop." verbose="Consider using std::find_if algorithm instead of a raw loop." cwe="398" file0="openpilot/system/camerad/cameras/camera_qcom2.cc">
+            <location file="openpilot/system/camerad/cameras/camera_qcom2.cc" line="309" column="70"/>
+        </error>
+        <error id="clarifyCondition" severity="style" msg="Boolean result is used in bitwise operation. Clarify expression with parentheses." verbose="Suspicious expression. Boolean result is used in bitwise operation. The operator &apos;!&apos; and the comparison operators have higher precedence than bitwise operators. It is recommended that the expression is clarified with parentheses." cwe="398" file0="openpilot/system/camerad/cameras/spectra.cc">
+            <location file="openpilot/system/camerad/cameras/spectra.cc" line="676" column="32"/>
+        </error>
+        <error id="containerOutOfBounds" severity="warning" msg="Either the condition &apos;patches.size()&gt;0&apos; is redundant or patches size can be 1. Expression &apos;patches[1]&apos; cause access out of bounds." verbose="Either the condition &apos;patches.size()&gt;0&apos; is redundant or patches size can be 1. Expression &apos;patches[1]&apos; cause access out of bounds." cwe="398" file0="openpilot/system/camerad/cameras/spectra.cc">
+            <location file="openpilot/system/camerad/cameras/spectra.cc" line="886" column="51" info="Access out of bounds"/>
+            <location file="openpilot/system/camerad/cameras/spectra.cc" line="881" column="24" info="Assuming that condition &apos;patches.size()&gt;0&apos; is not redundant"/>
+            <symbol>patches</symbol>
+        </error>
+        <error id="containerOutOfBounds" severity="warning" msg="Either the condition &apos;patches.size()&gt;0&apos; is redundant or patches size can be 1. Expression &apos;patches[2]&apos; cause access out of bounds." verbose="Either the condition &apos;patches.size()&gt;0&apos; is redundant or patches size can be 1. Expression &apos;patches[2]&apos; cause access out of bounds." cwe="398" file0="openpilot/system/camerad/cameras/spectra.cc">
+            <location file="openpilot/system/camerad/cameras/spectra.cc" line="887" column="51" info="Access out of bounds"/>
+            <location file="openpilot/system/camerad/cameras/spectra.cc" line="881" column="24" info="Assuming that condition &apos;patches.size()&gt;0&apos; is not redundant"/>
+            <symbol>patches</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;Anonymous0::ptr&apos; is never used." verbose="struct member &apos;Anonymous0::ptr&apos; is never used." cwe="563" file0="openpilot/system/camerad/cameras/spectra.cc">
+            <location file="openpilot/system/camerad/cameras/spectra.cc" line="490" column="16"/>
+            <symbol>Anonymous0::ptr</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;Anonymous0::unknown&apos; is never used." verbose="struct member &apos;Anonymous0::unknown&apos; is never used." cwe="563" file0="openpilot/system/camerad/cameras/spectra.cc">
+            <location file="openpilot/system/camerad/cameras/spectra.cc" line="491" column="16"/>
+            <symbol>Anonymous0::unknown</symbol>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686" file0="openpilot/system/loggerd/encoder/v4l_encoder.cc">
+            <location file="openpilot/system/loggerd/encoder/v4l_encoder.cc" line="131" column="9"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 3) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 3) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686" file0="openpilot/system/loggerd/encoder/v4l_encoder.cc">
+            <location file="openpilot/system/loggerd/encoder/v4l_encoder.cc" line="131" column="9"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 6) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 6) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686" file0="openpilot/system/loggerd/encoder/v4l_encoder.cc">
+            <location file="openpilot/system/loggerd/encoder/v4l_encoder.cc" line="131" column="9"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;frame_id&apos; can be reduced." verbose="The scope of the variable &apos;frame_id&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="openpilot/system/loggerd/encoder/v4l_encoder.cc">
+            <location file="openpilot/system/loggerd/encoder/v4l_encoder.cc" line="107" column="9"/>
+            <symbol>frame_id</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;cam&apos; can be declared with const" verbose="Parameter &apos;cam&apos; can be declared with const" cwe="398" file0="openpilot/system/loggerd/encoderd.cc">
+            <location file="openpilot/system/loggerd/encoderd.cc" line="144" column="45" info="Parameter &apos;cam&apos; can be declared with const"/>
+            <symbol>cam</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: _" verbose="Unused variable: _" cwe="563" file0="openpilot/system/loggerd/loggerd.cc">
+            <location file="openpilot/system/loggerd/loggerd.cc" line="234" column="21"/>
+            <symbol>_</symbol>
+        </error>
+        <error id="unassignedVariable" severity="style" msg="Variable &apos;sock&apos; is not assigned a value." verbose="Variable &apos;sock&apos; is not assigned a value." cwe="665" file0="openpilot/system/loggerd/loggerd.cc">
+            <location file="openpilot/system/loggerd/loggerd.cc" line="269" column="15"/>
+            <symbol>sock</symbol>
+        </error>
+        <error id="unassignedVariable" severity="style" msg="Variable &apos;sock&apos; is not assigned a value." verbose="Variable &apos;sock&apos; is not assigned a value." cwe="665" file0="openpilot/system/loggerd/loggerd.cc">
+            <location file="openpilot/system/loggerd/loggerd.cc" line="342" column="15"/>
+            <symbol>sock</symbol>
+        </error>
+        <error id="syntaxError" severity="error" msg="Unmatched &apos;{&apos;. Configuration: &apos;&apos;." verbose="Unmatched &apos;{&apos;. Configuration: &apos;&apos;." file0="openpilot/third_party/acados/acados_template/c_templates_tera/acados_sim_solver.in.c">
+            <location file="openpilot/third_party/acados/acados_template/c_templates_tera/acados_sim_solver.in.c" line="291" column="12"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="Unmatched &apos;{&apos;. Configuration: &apos;&apos;." verbose="Unmatched &apos;{&apos;. Configuration: &apos;&apos;." file0="openpilot/third_party/acados/acados_template/c_templates_tera/acados_solver.in.c">
+            <location file="openpilot/third_party/acados/acados_template/c_templates_tera/acados_solver.in.c" line="2352" column="5"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="Unmatched &apos;{&apos;. Configuration: &apos;&apos;." verbose="Unmatched &apos;{&apos;. Configuration: &apos;&apos;." file0="openpilot/third_party/acados/acados_template/c_templates_tera/main.in.c">
+            <location file="openpilot/third_party/acados/acados_template/c_templates_tera/main.in.c" line="82" column="1"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="Unmatched &apos;{&apos;. Configuration: &apos;&apos;." verbose="Unmatched &apos;{&apos;. Configuration: &apos;&apos;." file0="openpilot/third_party/acados/acados_template/c_templates_tera/main_sim.in.c">
+            <location file="openpilot/third_party/acados/acados_template/c_templates_tera/main_sim.in.c" line="48" column="1"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="Unmatched &apos;{&apos;. Configuration: &apos;&apos;." verbose="Unmatched &apos;{&apos;. Configuration: &apos;&apos;." file0="openpilot/third_party/acados/acados_template/c_templates_tera/matlab_templates/acados_mex_create.in.c">
+            <location file="openpilot/third_party/acados/acados_template/c_templates_tera/matlab_templates/acados_mex_create.in.c" line="47" column="1"/>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;nu&apos; shadows outer variable" verbose="Local variable &apos;nu&apos; shadows outer variable" cwe="398" file0="openpilot/third_party/acados/acados_template/c_templates_tera/matlab_templates/acados_mex_set.in.c">
+            <location file="openpilot/third_party/acados/acados_template/c_templates_tera/matlab_templates/acados_mex_set.in.c" line="263" column="21" info="Shadow variable"/>
+            <location file="openpilot/third_party/acados/acados_template/c_templates_tera/matlab_templates/acados_mex_set.in.c" line="98" column="9" info="Shadowed declaration"/>
+            <symbol>nu</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;nx&apos; shadows outer variable" verbose="Local variable &apos;nx&apos; shadows outer variable" cwe="398" file0="openpilot/third_party/acados/acados_template/c_templates_tera/matlab_templates/acados_mex_set.in.c">
+            <location file="openpilot/third_party/acados/acados_template/c_templates_tera/matlab_templates/acados_mex_set.in.c" line="281" column="21" info="Shadow variable"/>
+            <location file="openpilot/third_party/acados/acados_template/c_templates_tera/matlab_templates/acados_mex_set.in.c" line="99" column="9" info="Shadowed declaration"/>
+            <symbol>nx</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;nx&apos; shadows outer variable" verbose="Local variable &apos;nx&apos; shadows outer variable" cwe="398" file0="openpilot/third_party/acados/acados_template/c_templates_tera/matlab_templates/acados_mex_set.in.c">
+            <location file="openpilot/third_party/acados/acados_template/c_templates_tera/matlab_templates/acados_mex_set.in.c" line="445" column="17" info="Shadow variable"/>
+            <location file="openpilot/third_party/acados/acados_template/c_templates_tera/matlab_templates/acados_mex_set.in.c" line="99" column="9" info="Shadowed declaration"/>
+            <symbol>nx</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;C_ext_fun_pointers&apos; is assigned a value that is never used." verbose="Variable &apos;C_ext_fun_pointers&apos; is assigned a value that is never used." cwe="563" file0="openpilot/third_party/acados/acados_template/c_templates_tera/matlab_templates/acados_mex_set.in.c">
+            <location file="openpilot/third_party/acados/acados_template/c_templates_tera/matlab_templates/acados_mex_set.in.c" line="86" column="39"/>
+            <symbol>C_ext_fun_pointers</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: mex_field" verbose="Unused variable: mex_field" cwe="563" file0="openpilot/third_party/acados/acados_template/c_templates_tera/matlab_templates/acados_mex_set.in.c">
+            <location file="openpilot/third_party/acados/acados_template/c_templates_tera/matlab_templates/acados_mex_set.in.c" line="52" column="14"/>
+            <symbol>mex_field</symbol>
+        </error>
+        <error id="syntaxError" severity="error" msg="Unmatched &apos;{&apos;. Configuration: &apos;&apos;." verbose="Unmatched &apos;{&apos;. Configuration: &apos;&apos;." file0="openpilot/third_party/acados/acados_template/c_templates_tera/matlab_templates/acados_sim_solver_sfun.in.c">
+            <location file="openpilot/third_party/acados/acados_template/c_templates_tera/matlab_templates/acados_sim_solver_sfun.in.c" line="58" column="28"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="Unmatched &apos;{&apos;. Configuration: &apos;MATLAB_MEX_FILE&apos;." verbose="Unmatched &apos;{&apos;. Configuration: &apos;MATLAB_MEX_FILE&apos;." file0="openpilot/third_party/acados/acados_template/c_templates_tera/matlab_templates/acados_sim_solver_sfun.in.c">
+            <location file="openpilot/third_party/acados/acados_template/c_templates_tera/matlab_templates/acados_sim_solver_sfun.in.c" line="58" column="28"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="Unmatched &apos;{&apos;. Configuration: &apos;&apos;." verbose="Unmatched &apos;{&apos;. Configuration: &apos;&apos;." file0="openpilot/third_party/acados/acados_template/c_templates_tera/matlab_templates/acados_solver_sfun.in.c">
+            <location file="openpilot/third_party/acados/acados_template/c_templates_tera/matlab_templates/acados_solver_sfun.in.c" line="720" column="42"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="Unmatched &apos;{&apos;. Configuration: &apos;MATLAB_MEX_FILE&apos;." verbose="Unmatched &apos;{&apos;. Configuration: &apos;MATLAB_MEX_FILE&apos;." file0="openpilot/third_party/acados/acados_template/c_templates_tera/matlab_templates/acados_solver_sfun.in.c">
+            <location file="openpilot/third_party/acados/acados_template/c_templates_tera/matlab_templates/acados_solver_sfun.in.c" line="720" column="42"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="openpilot/third_party/acados/acados_template/c_templates_tera/matlab_templates/main_mex.in.c">
+            <location file="openpilot/third_party/acados/acados_template/c_templates_tera/matlab_templates/main_mex.in.c" line="96" column="8"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="openpilot/third_party/acados/acados_template/custom_update_templates/custom_update_function_zoro_template.in.c">
+            <location file="openpilot/third_party/acados/acados_template/custom_update_templates/custom_update_function_zoro_template.in.c" line="403" column="5"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Json&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Json&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="openpilot/third_party/json11/json11.cpp">
+            <location file="openpilot/third_party/json11/json11.hpp" line="92" column="5"/>
+            <symbol>Json</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Json&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Json&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="openpilot/third_party/json11/json11.cpp">
+            <location file="openpilot/third_party/json11/json11.hpp" line="93" column="5"/>
+            <symbol>Json</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Json&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Json&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="openpilot/third_party/json11/json11.cpp">
+            <location file="openpilot/third_party/json11/json11.hpp" line="94" column="5"/>
+            <symbol>Json</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Json&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Json&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="openpilot/third_party/json11/json11.cpp">
+            <location file="openpilot/third_party/json11/json11.hpp" line="95" column="5"/>
+            <symbol>Json</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Json&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Json&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="openpilot/third_party/json11/json11.cpp">
+            <location file="openpilot/third_party/json11/json11.hpp" line="96" column="5"/>
+            <symbol>Json</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Json&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Json&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="openpilot/third_party/json11/json11.cpp">
+            <location file="openpilot/third_party/json11/json11.hpp" line="97" column="5"/>
+            <symbol>Json</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Json&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Json&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="openpilot/third_party/json11/json11.cpp">
+            <location file="openpilot/third_party/json11/json11.hpp" line="98" column="5"/>
+            <symbol>Json</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Json&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Json&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="openpilot/third_party/json11/json11.cpp">
+            <location file="openpilot/third_party/json11/json11.hpp" line="99" column="5"/>
+            <symbol>Json</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Json&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Json&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="openpilot/third_party/json11/json11.cpp">
+            <location file="openpilot/third_party/json11/json11.hpp" line="100" column="5"/>
+            <symbol>Json</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Json&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Json&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="openpilot/third_party/json11/json11.cpp">
+            <location file="openpilot/third_party/json11/json11.hpp" line="101" column="5"/>
+            <symbol>Json</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Json&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Json&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="openpilot/third_party/json11/json11.cpp">
+            <location file="openpilot/third_party/json11/json11.hpp" line="102" column="5"/>
+            <symbol>Json</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Json&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Json&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="openpilot/third_party/json11/json11.cpp">
+            <location file="openpilot/third_party/json11/json11.hpp" line="106" column="5"/>
+            <symbol>Json</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Json&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Json&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="openpilot/third_party/json11/json11.cpp">
+            <location file="openpilot/third_party/json11/json11.hpp" line="113" column="5"/>
+            <symbol>Json</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Json&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Json&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="openpilot/third_party/json11/json11.cpp">
+            <location file="openpilot/third_party/json11/json11.hpp" line="119" column="5"/>
+            <symbol>Json</symbol>
+        </error>
+        <error id="shadowFunction" severity="style" msg="Local variable &apos;esc&apos; shadows outer function" verbose="Local variable &apos;esc&apos; shadows outer function" cwe="398" file0="openpilot/third_party/json11/json11.cpp">
+            <location file="openpilot/third_party/json11/json11.cpp" line="509" column="24" info="Shadow variable"/>
+            <location file="openpilot/third_party/json11/json11.cpp" line="324" column="22" info="Shadowed declaration"/>
+            <symbol>esc</symbol>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::find_if algorithm instead of a raw loop." verbose="Consider using std::find_if algorithm instead of a raw loop." cwe="398" file0="openpilot/third_party/json11/json11.cpp">
+            <location file="openpilot/third_party/json11/json11.cpp" line="775" column="56"/>
+        </error>
+        <error id="clarifyCondition" severity="style" msg="Boolean result is used in bitwise operation. Clarify expression with parentheses." verbose="Suspicious expression. Boolean result is used in bitwise operation. The operator &apos;!&apos; and the comparison operators have higher precedence than bitwise operators. It is recommended that the expression is clarified with parentheses." cwe="398" file0="openpilot/third_party/qrcode/QrCode.cc">
+            <location file="openpilot/third_party/qrcode/QrCode.cc" line="614" column="56"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::accumulate algorithm instead of a raw loop." verbose="Consider using std::accumulate algorithm instead of a raw loop." cwe="398" file0="openpilot/third_party/qrcode/QrCode.cc">
+            <location file="openpilot/third_party/qrcode/QrCode.cc" line="284" column="8"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::count_if algorithm instead of a raw loop." verbose="Consider using std::count_if algorithm instead of a raw loop." cwe="398" file0="openpilot/third_party/qrcode/QrCode.cc">
+            <location file="openpilot/third_party/qrcode/QrCode.cc" line="684" column="5"/>
+        </error>
+        <error id="duplicateValueTernary" severity="style" msg="Same value in both branches of ternary operator." verbose="Finding the same value in both branches of ternary operator is suspicious as the same code is executed regardless of the condition." cwe="398" file0="openpilot/tools/cabana/binaryview.cc">
+            <location file="openpilot/tools/cabana/binaryview.cc" line="264" column="70"/>
+        </error>
+        <error id="duplicateValueTernary" severity="style" msg="Same value in both branches of ternary operator." verbose="Finding the same value in both branches of ternary operator is suspicious as the same code is executed regardless of the condition." cwe="398" file0="openpilot/tools/cabana/binaryview.cc">
+            <location file="openpilot/tools/cabana/binaryview.cc" line="265" column="82"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::find_if algorithm instead of a raw loop." verbose="Consider using std::find_if algorithm instead of a raw loop." cwe="398" file0="openpilot/tools/cabana/binaryview.cc">
+            <location file="openpilot/tools/cabana/binaryview.cc" line="146" column="51"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::accumulate algorithm instead of a raw loop." verbose="Consider using std::accumulate algorithm instead of a raw loop." cwe="398" file0="openpilot/tools/cabana/binaryview.cc">
+            <location file="openpilot/tools/cabana/binaryview.cc" line="216" column="66"/>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;s&apos; can be declared with const" verbose="Parameter &apos;s&apos; can be declared with const" cwe="398" file0="openpilot/tools/cabana/chart/chart.cc">
+            <location file="openpilot/tools/cabana/chart/chart.cc" line="134" column="60" info="Parameter &apos;s&apos; can be declared with const"/>
+            <symbol>s</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;s&apos; can be declared with const" verbose="Parameter &apos;s&apos; can be declared with const" cwe="398" file0="openpilot/tools/cabana/chart/chart.cc">
+            <location file="openpilot/tools/cabana/chart/chart.cc" line="158" column="64" info="Parameter &apos;s&apos; can be declared with const"/>
+            <symbol>s</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;it&apos; can be declared with const" verbose="Parameter &apos;it&apos; can be declared with const" cwe="398" file0="openpilot/tools/cabana/chart/chart.cc">
+            <location file="openpilot/tools/cabana/chart/chart.cc" line="185" column="67" info="Parameter &apos;it&apos; can be declared with const"/>
+            <symbol>it</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;s&apos; can be declared with const" verbose="Parameter &apos;s&apos; can be declared with const" cwe="398" file0="openpilot/tools/cabana/chart/chartswidget.cc">
+            <location file="openpilot/tools/cabana/chart/chartswidget.cc" line="299" column="31" info="Parameter &apos;s&apos; can be declared with const"/>
+            <symbol>s</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: _" verbose="Unused variable: _" cwe="563" file0="openpilot/tools/cabana/chart/chartswidget.cc">
+            <location file="openpilot/tools/cabana/chart/chartswidget.cc" line="422" column="15"/>
+            <symbol>_</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: _" verbose="Unused variable: _" cwe="563" file0="openpilot/tools/cabana/chart/chartswidget.cc">
+            <location file="openpilot/tools/cabana/chart/chartswidget.cc" line="536" column="19"/>
+            <symbol>_</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;s&apos; can be declared with const" verbose="Parameter &apos;s&apos; can be declared with const" cwe="398" file0="openpilot/tools/cabana/dbc/dbc.cc">
+            <location file="openpilot/tools/cabana/dbc/dbc.cc" line="35" column="62" info="Parameter &apos;s&apos; can be declared with const"/>
+            <symbol>s</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;s&apos; can be declared with const" verbose="Parameter &apos;s&apos; can be declared with const" cwe="398" file0="openpilot/tools/cabana/dbc/dbc.cc">
+            <location file="openpilot/tools/cabana/dbc/dbc.cc" line="61" column="62" info="Parameter &apos;s&apos; can be declared with const"/>
+            <symbol>s</symbol>
+        </error>
+        <error id="unassignedVariable" severity="style" msg="Variable &apos;val&apos; is not assigned a value." verbose="Variable &apos;val&apos; is not assigned a value." cwe="665" file0="openpilot/tools/cabana/dbc/dbc.cc">
+            <location file="openpilot/tools/cabana/dbc/dbc.cc" line="149" column="21"/>
+            <symbol>val</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;m&apos; can be declared with const" verbose="Parameter &apos;m&apos; can be declared with const" cwe="398" file0="openpilot/tools/cabana/dbc/dbcfile.cc">
+            <location file="openpilot/tools/cabana/dbc/dbcfile.cc" line="55" column="66" info="Parameter &apos;m&apos; can be declared with const"/>
+            <symbol>m</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: _" verbose="Unused variable: _" cwe="563" file0="openpilot/tools/cabana/dbc/dbcfile.cc">
+            <location file="openpilot/tools/cabana/dbc/dbcfile.cc" line="106" column="15"/>
+            <symbol>_</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;f&apos; can be declared with const" verbose="Parameter &apos;f&apos; can be declared with const" cwe="398" file0="openpilot/tools/cabana/dbc/dbcmanager.cc">
+            <location file="openpilot/tools/cabana/dbc/dbcmanager.cc" line="10" column="38" info="Parameter &apos;f&apos; can be declared with const"/>
+            <symbol>f</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: _" verbose="Unused variable: _" cwe="563" file0="openpilot/tools/cabana/dbc/dbcmanager.cc">
+            <location file="openpilot/tools/cabana/dbc/dbcmanager.cc" line="47" column="15"/>
+            <symbol>_</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: _" verbose="Unused variable: _" cwe="563" file0="openpilot/tools/cabana/dbc/dbcmanager.cc">
+            <location file="openpilot/tools/cabana/dbc/dbcmanager.cc" line="130" column="17"/>
+            <symbol>_</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: _" verbose="Unused variable: _" cwe="563" file0="openpilot/tools/cabana/dbc/dbcmanager.cc">
+            <location file="openpilot/tools/cabana/dbc/dbcmanager.cc" line="154" column="21"/>
+            <symbol>_</symbol>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;msg&apos; should be passed by const reference." verbose="Parameter &apos;msg&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="openpilot/tools/cabana/mainwin.cc">
+            <location file="openpilot/tools/cabana/mainwin.cc" line="57" column="65"/>
+            <symbol>msg</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;item&apos; can be declared with const" verbose="Parameter &apos;item&apos; can be declared with const" cwe="398" file0="openpilot/tools/cabana/messageswidget.cc">
+            <location file="openpilot/tools/cabana/messageswidget.cc" line="117" column="42" info="Parameter &apos;item&apos; can be declared with const"/>
+            <symbol>item</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: _" verbose="Unused variable: _" cwe="563" file0="openpilot/tools/cabana/messageswidget.cc">
+            <location file="openpilot/tools/cabana/messageswidget.cc" line="226" column="21"/>
+            <symbol>_</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: _" verbose="Unused variable: _" cwe="563" file0="openpilot/tools/cabana/messageswidget.cc">
+            <location file="openpilot/tools/cabana/messageswidget.cc" line="400" column="23"/>
+            <symbol>_</symbol>
+        </error>
+        <error id="clarifyCalculation" severity="style" msg="Clarify calculation precedence for &apos;&amp;&apos; and &apos;?&apos;." verbose="Suspicious calculation. Please use parentheses to clarify the code. The code &apos;&apos;a&amp;b?c:d&apos;&apos; should be written as either &apos;&apos;(a&amp;b)?c:d&apos;&apos; or &apos;&apos;a&amp;(b?c:d)&apos;&apos;." cwe="783" file0="openpilot/tools/cabana/signalview.cc">
+            <location file="openpilot/tools/cabana/signalview.cc" line="325" column="80"/>
+        </error>
+        <error id="clarifyCalculation" severity="style" msg="Clarify calculation precedence for &apos;&amp;&apos; and &apos;?&apos;." verbose="Suspicious calculation. Please use parentheses to clarify the code. The code &apos;&apos;a&amp;b?c:d&apos;&apos; should be written as either &apos;&apos;(a&amp;b)?c:d&apos;&apos; or &apos;&apos;a&amp;(b?c:d)&apos;&apos;." cwe="783" file0="openpilot/tools/cabana/signalview.cc">
+            <location file="openpilot/tools/cabana/signalview.cc" line="333" column="82"/>
+        </error>
+        <error id="unassignedVariable" severity="style" msg="Variable &apos;address&apos; is not assigned a value." verbose="Variable &apos;address&apos; is not assigned a value." cwe="665" file0="openpilot/tools/cabana/streams/abstractstream.cc">
+            <location file="openpilot/tools/cabana/streams/abstractstream.cc" line="32" column="23"/>
+            <symbol>address</symbol>
+        </error>
+        <error id="unassignedVariable" severity="style" msg="Variable &apos;id&apos; is not assigned a value." verbose="Variable &apos;id&apos; is not assigned a value." cwe="665" file0="openpilot/tools/cabana/streams/abstractstream.cc">
+            <location file="openpilot/tools/cabana/streams/abstractstream.cc" line="37" column="15"/>
+            <symbol>id</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: _" verbose="Unused variable: _" cwe="563" file0="openpilot/tools/cabana/streams/abstractstream.cc">
+            <location file="openpilot/tools/cabana/streams/abstractstream.cc" line="56" column="15"/>
+            <symbol>_</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;OneShotHttpRequest&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;OneShotHttpRequest&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="openpilot/tools/cabana/streams/routes.cc">
+            <location file="openpilot/tools/cabana/streams/routes.cc" line="14" column="3"/>
+            <symbol>OneShotHttpRequest</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;SocketCanStream&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;SocketCanStream&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="openpilot/tools/cabana/streamselector.cc">
+            <location file="openpilot/tools/cabana/streams/socketcanstream.h" line="19" column="3"/>
+            <symbol>SocketCanStream</symbol>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &apos;sig_2&apos; can be declared with const" verbose="Variable &apos;sig_2&apos; can be declared with const" cwe="398" file0="openpilot/tools/cabana/tests/test_cabana.cc">
+            <location file="openpilot/tools/cabana/tests/test_cabana.cc" line="126" column="9" info="Variable &apos;sig_2&apos; can be declared with const"/>
+            <symbol>sig_2</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;l&apos; can be declared with const" verbose="Parameter &apos;l&apos; can be declared with const" cwe="398" file0="openpilot/tools/cabana/tools/findsimilarbits.cc">
+            <location file="openpilot/tools/cabana/tools/findsimilarbits.cc" line="158" column="52" info="Parameter &apos;l&apos; can be declared with const"/>
+            <symbol>l</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;r&apos; can be declared with const" verbose="Parameter &apos;r&apos; can be declared with const" cwe="398" file0="openpilot/tools/cabana/tools/findsimilarbits.cc">
+            <location file="openpilot/tools/cabana/tools/findsimilarbits.cc" line="158" column="61" info="Parameter &apos;r&apos; can be declared with const"/>
+            <symbol>r</symbol>
+        </error>
+        <error id="clarifyCalculation" severity="style" msg="Clarify calculation precedence for &apos;&amp;&apos; and &apos;?&apos;." verbose="Suspicious calculation. Please use parentheses to clarify the code. The code &apos;&apos;a&amp;b?c:d&apos;&apos; should be written as either &apos;&apos;(a&amp;b)?c:d&apos;&apos; or &apos;&apos;a&amp;(b?c:d)&apos;&apos;." cwe="783" file0="openpilot/tools/cabana/utils/util.cc">
+            <location file="openpilot/tools/cabana/utils/util.cc" line="91" column="59"/>
+        </error>
+        <error id="clarifyCalculation" severity="style" msg="Clarify calculation precedence for &apos;&amp;&apos; and &apos;?&apos;." verbose="Suspicious calculation. Please use parentheses to clarify the code. The code &apos;&apos;a&amp;b?c:d&apos;&apos; should be written as either &apos;&apos;(a&amp;b)?c:d&apos;&apos; or &apos;&apos;a&amp;(b?c:d)&apos;&apos;." cwe="783" file0="openpilot/tools/cabana/utils/util.cc">
+            <location file="openpilot/tools/cabana/utils/util.cc" line="102" column="61"/>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;msg&apos; should be passed by const reference." verbose="Parameter &apos;msg&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="openpilot/tools/replay/consoleui.cc">
+            <location file="openpilot/tools/replay/consoleui.cc" line="85" column="69"/>
+            <symbol>msg</symbol>
+        </error>
+        <error id="unassignedVariable" severity="style" msg="Variable &apos;key&apos; is not assigned a value." verbose="Variable &apos;key&apos; is not assigned a value." cwe="665" file0="openpilot/tools/replay/consoleui.cc">
+            <location file="openpilot/tools/replay/consoleui.cc" line="184" column="17"/>
+            <symbol>key</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;op_prefix&apos; is assigned a value that is never used." verbose="Variable &apos;op_prefix&apos; is assigned a value that is never used." cwe="563" file0="openpilot/tools/replay/main.cc">
+            <location file="openpilot/tools/replay/main.cc" line="138" column="15"/>
+            <symbol>op_prefix</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;planes[0].data_offset&apos; is assigned a value that is never used." verbose="Variable &apos;planes[0].data_offset&apos; is assigned a value that is never used." cwe="563" file0="openpilot/tools/replay/qcom_decoder.cc">
+            <location file="openpilot/tools/replay/qcom_decoder.cc" line="225" column="27"/>
+            <symbol>planes[0].data_offset</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;planes[0].data_offset&apos; is assigned a value that is never used." verbose="Variable &apos;planes[0].data_offset&apos; is assigned a value that is never used." cwe="563" file0="openpilot/tools/replay/qcom_decoder.cc">
+            <location file="openpilot/tools/replay/qcom_decoder.cc" line="246" column="27"/>
+            <symbol>planes[0].data_offset</symbol>
+        </error>
+        <error id="clarifyCalculation" severity="style" msg="Clarify calculation precedence for &apos;&amp;&apos; and &apos;?&apos;." verbose="Suspicious calculation. Please use parentheses to clarify the code. The code &apos;&apos;a&amp;b?c:d&apos;&apos; should be written as either &apos;&apos;(a&amp;b)?c:d&apos;&apos; or &apos;&apos;a&amp;(b?c:d)&apos;&apos;." cwe="783" file0="openpilot/tools/replay/route.cc">
+            <location file="openpilot/tools/replay/route.cc" line="200" column="32"/>
+        </error>
+        <error id="clarifyCalculation" severity="style" msg="Clarify calculation precedence for &apos;&amp;&apos; and &apos;?&apos;." verbose="Suspicious calculation. Please use parentheses to clarify the code. The code &apos;&apos;a&amp;b?c:d&apos;&apos; should be written as either &apos;&apos;(a&amp;b)?c:d&apos;&apos; or &apos;&apos;a&amp;(b?c:d)&apos;&apos;." cwe="783" file0="openpilot/tools/replay/route.cc">
+            <location file="openpilot/tools/replay/route.cc" line="201" column="32"/>
+        </error>
+        <error id="unassignedVariable" severity="style" msg="Variable &apos;n&apos; is not assigned a value." verbose="Variable &apos;n&apos; is not assigned a value." cwe="665" file0="openpilot/tools/replay/seg_mgr.cc">
+            <location file="openpilot/tools/replay/seg_mgr.cc" line="20" column="21"/>
+            <symbol>n</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;a&apos; can be declared with const" verbose="Parameter &apos;a&apos; can be declared with const" cwe="398" file0="openpilot/tools/replay/timeline.cc">
+            <location file="openpilot/tools/replay/timeline.cc" line="76" column="58" info="Parameter &apos;a&apos; can be declared with const"/>
+            <symbol>a</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;b&apos; can be declared with const" verbose="Parameter &apos;b&apos; can be declared with const" cwe="398" file0="openpilot/tools/replay/timeline.cc">
+            <location file="openpilot/tools/replay/timeline.cc" line="76" column="67" info="Parameter &apos;b&apos; can be declared with const"/>
+            <symbol>b</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;a&apos; can be declared with const" verbose="Parameter &apos;a&apos; can be declared with const" cwe="398" file0="openpilot/tools/replay/util.cc">
+            <location file="openpilot/tools/replay/util.cc" line="115" column="94" info="Parameter &apos;a&apos; can be declared with const"/>
+            <symbol>a</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;b&apos; can be declared with const" verbose="Parameter &apos;b&apos; can be declared with const" cwe="398" file0="openpilot/tools/replay/util.cc">
+            <location file="openpilot/tools/replay/util.cc" line="115" column="103" info="Parameter &apos;b&apos; can be declared with const"/>
+            <symbol>b</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;can_capnp_to_can_list_cpp&apos; is never used." verbose="The function &apos;can_capnp_to_can_list_cpp&apos; is never used." cwe="561">
+            <location file="openpilot/selfdrive/pandad/can_list_to_can_capnp.cc" line="23" column="0"/>
+            <symbol>can_capnp_to_can_list_cpp</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;can_list_to_can_capnp_cpp&apos; is never used." verbose="The function &apos;can_list_to_can_capnp_cpp&apos; is never used." cwe="561">
+            <location file="openpilot/selfdrive/pandad/can_list_to_can_capnp.cc" line="4" column="0"/>
+            <symbol>can_list_to_can_capnp_cpp</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;cl_create_context&apos; is never used." verbose="The function &apos;cl_create_context&apos; is never used." cwe="561">
+            <location file="openpilot/common/clutil.cc" line="78" column="0"/>
+            <symbol>cl_create_context</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;cl_release_context&apos; is never used." verbose="The function &apos;cl_release_context&apos; is never used." cwe="561">
+            <location file="openpilot/common/clutil.cc" line="82" column="0"/>
+            <symbol>cl_release_context</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;cloudlog_te&apos; is never used." verbose="The function &apos;cloudlog_te&apos; is never used." cwe="561">
+            <location file="openpilot/common/swaglog.cc" line="142" column="0"/>
+            <symbol>cloudlog_te</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;ecef_euler_from_ned&apos; is never used." verbose="The function &apos;ecef_euler_from_ned&apos; is never used." cwe="561">
+            <location file="openpilot/common/transformations/orientation.cc" line="66" column="0"/>
+            <symbol>ecef_euler_from_ned</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;encodeBinary&apos; is never used." verbose="The function &apos;encodeBinary&apos; is never used." cwe="561">
+            <location file="openpilot/third_party/qrcode/QrCode.cc" line="249" column="0"/>
+            <symbol>encodeBinary</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getErrorCorrectionLevel&apos; is never used." verbose="The function &apos;getErrorCorrectionLevel&apos; is never used." cwe="561">
+            <location file="openpilot/third_party/qrcode/QrCode.cc" line="373" column="0"/>
+            <symbol>getErrorCorrectionLevel</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getMask&apos; is never used." verbose="The function &apos;getMask&apos; is never used." cwe="561">
+            <location file="openpilot/third_party/qrcode/QrCode.cc" line="378" column="0"/>
+            <symbol>getMask</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;loaduv&apos; is never used." verbose="The function &apos;loaduv&apos; is never used." cwe="561">
+            <location file="openpilot/selfdrive/modeld/transforms/loadyuv.cl" line="31" column="0"/>
+            <symbol>loaduv</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;loadys&apos; is never used." verbose="The function &apos;loadys&apos; is never used." cwe="561">
+            <location file="openpilot/selfdrive/modeld/transforms/loadyuv.cl" line="3" column="0"/>
+            <symbol>loadys</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;makeEci&apos; is never used." verbose="The function &apos;makeEci&apos; is never used." cwe="561">
+            <location file="openpilot/third_party/qrcode/QrCode.cc" line="141" column="0"/>
+            <symbol>makeEci</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;mexFunction&apos; is never used." verbose="The function &apos;mexFunction&apos; is never used." cwe="561">
+            <location file="openpilot/third_party/acados/acados_template/c_templates_tera/matlab_templates/acados_mex_free.in.c" line="42" column="0"/>
+            <symbol>mexFunction</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;ned_euler_from_ecef&apos; is never used." verbose="The function &apos;ned_euler_from_ecef&apos; is never used." cwe="561">
+            <location file="openpilot/common/transformations/orientation.cc" line="106" column="0"/>
+            <symbol>ned_euler_from_ecef</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;rgb_to_nv12&apos; is never used." verbose="The function &apos;rgb_to_nv12&apos; is never used." cwe="561">
+            <location file="openpilot/tools/sim/rgb_to_nv12.cl" line="68" column="0"/>
+            <symbol>rgb_to_nv12</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;rot2euler&apos; is never used." verbose="The function &apos;rot2euler&apos; is never used." cwe="561">
+            <location file="openpilot/common/transformations/orientation.cc" line="51" column="0"/>
+            <symbol>rot2euler</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;rot_matrix&apos; is never used." verbose="The function &apos;rot_matrix&apos; is never used." cwe="561">
+            <location file="openpilot/common/transformations/orientation.cc" line="55" column="0"/>
+            <symbol>rot_matrix</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;set_main_window&apos; is never used." verbose="The function &apos;set_main_window&apos; is never used." cwe="561">
+            <location file="openpilot/selfdrive/ui/qt/qt_window.cc" line="33" column="0"/>
+            <symbol>set_main_window</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;strip&apos; is never used." verbose="The function &apos;strip&apos; is never used." cwe="561">
+            <location file="openpilot/common/util.cc" line="266" column="0"/>
+            <symbol>strip</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;toSvgString&apos; is never used." verbose="The function &apos;toSvgString&apos; is never used." cwe="561">
+            <location file="openpilot/third_party/qrcode/QrCode.cc" line="388" column="0"/>
+            <symbol>toSvgString</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;topWidget&apos; is never used." verbose="The function &apos;topWidget&apos; is never used." cwe="561">
+            <location file="openpilot/selfdrive/ui/qt/util.cc" line="151" column="0"/>
+            <symbol>topWidget</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;transform_destroy&apos; is never used." verbose="The function &apos;transform_destroy&apos; is never used." cwe="561">
+            <location file="openpilot/selfdrive/modeld/transforms/transform.cc" line="20" column="0"/>
+            <symbol>transform_destroy</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;transform_init&apos; is never used." verbose="The function &apos;transform_init&apos; is never used." cwe="561">
+            <location file="openpilot/selfdrive/modeld/transforms/transform.cc" line="8" column="0"/>
+            <symbol>transform_init</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;transform_queue&apos; is never used." verbose="The function &apos;transform_queue&apos; is never used." cwe="561">
+            <location file="openpilot/selfdrive/modeld/transforms/transform.cc" line="26" column="0"/>
+            <symbol>transform_queue</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;warpPerspective&apos; is never used." verbose="The function &apos;warpPerspective&apos; is never used." cwe="561">
+            <location file="openpilot/selfdrive/modeld/transforms/transform.cl" line="8" column="0"/>
+            <symbol>warpPerspective</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;write_dmi&apos; is never used." verbose="The function &apos;write_dmi&apos; is never used." cwe="561">
+            <location file="openpilot/system/camerad/cameras/cdm.cc" line="4" column="0"/>
+            <symbol>write_dmi</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;write_random&apos; is never used." verbose="The function &apos;write_random&apos; is never used." cwe="561">
+            <location file="openpilot/system/camerad/cameras/cdm.cc" line="34" column="0"/>
+            <symbol>write_random</symbol>
+        </error>
+        <error id="missingInclude" severity="information" msg="Cppcheck cannot find all the include files (use --check-config for details)" verbose="Cppcheck cannot find all the include files. Cppcheck can check the code without the include files found. But the results will probably be more accurate if all the include files are found. Please check your project&apos;s include directories and add all of them as include directories for Cppcheck. To see what files Cppcheck cannot find use --check-config."/>
+    </errors>
+</results>

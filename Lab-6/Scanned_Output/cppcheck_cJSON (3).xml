@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="2.7"/>
+    <errors>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 14 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="cJSON/cJSON.c" line="0" column="0"/>
+        </error>
+        <error id="uselessAssignmentPtrArg" severity="warning" msg="Assignment of function parameter has no effect outside the function. Did you forget dereferencing it?" verbose="Assignment of function parameter has no effect outside the function. Did you forget dereferencing it?" cwe="398" file0="cJSON/cJSON.c">
+            <location file="cJSON/cJSON.c" line="3190" column="5"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;(input_end-input_pointer)&lt;1&apos; is always false" verbose="Condition &apos;(input_end-input_pointer)&lt;1&apos; is always false" cwe="570" file0="cJSON/cJSON.c">
+            <location file="cJSON/cJSON.c" line="877" column="45" info="Condition &apos;(input_end-input_pointer)&lt;1&apos; is always false"/>
+            <location file="cJSON/cJSON.c" line="867" column="26" info="Assuming that condition &apos;input_pointer&lt;input_end&apos; is not redundant"/>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;input_buffer!=NULL&apos; is redundant or there is possible null pointer dereference: input_buffer." verbose="Either the condition &apos;input_buffer!=NULL&apos; is redundant or there is possible null pointer dereference: input_buffer." cwe="476" file0="cJSON/cJSON.c">
+            <location file="cJSON/cJSON.c" line="821" column="42" info="Null pointer dereference"/>
+            <location file="cJSON/cJSON.c" line="1716" column="41" info="Calling function &apos;parse_string&apos;, 2nd argument &apos;input_buffer&apos; value is 0"/>
+            <location file="cJSON/cJSON.c" line="1726" column="13" info="Assuming that condition &apos;input_buffer!=NULL&apos; is not redundant"/>
+            <symbol>input_buffer</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;input_buffer!=NULL&apos; is redundant or there is possible null pointer dereference: input_buffer." verbose="Either the condition &apos;input_buffer!=NULL&apos; is redundant or there is possible null pointer dereference: input_buffer." cwe="476" file0="cJSON/cJSON.c">
+            <location file="cJSON/cJSON.c" line="822" column="38" info="Null pointer dereference"/>
+            <location file="cJSON/cJSON.c" line="1716" column="41" info="Calling function &apos;parse_string&apos;, 2nd argument &apos;input_buffer&apos; value is 0"/>
+            <location file="cJSON/cJSON.c" line="1726" column="13" info="Assuming that condition &apos;input_buffer!=NULL&apos; is not redundant"/>
+            <symbol>input_buffer</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;input_buffer!=NULL&apos; is redundant or there is possible null pointer dereference: input_buffer." verbose="Either the condition &apos;input_buffer!=NULL&apos; is redundant or there is possible null pointer dereference: input_buffer." cwe="476" file0="cJSON/cJSON.c">
+            <location file="cJSON/cJSON.c" line="827" column="9" info="Null pointer dereference"/>
+            <location file="cJSON/cJSON.c" line="1716" column="41" info="Calling function &apos;parse_string&apos;, 2nd argument &apos;input_buffer&apos; value is 0"/>
+            <location file="cJSON/cJSON.c" line="1726" column="13" info="Assuming that condition &apos;input_buffer!=NULL&apos; is not redundant"/>
+            <symbol>input_buffer</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;input_buffer!=NULL&apos; is redundant or there is possible null pointer dereference: input_buffer." verbose="Either the condition &apos;input_buffer!=NULL&apos; is redundant or there is possible null pointer dereference: input_buffer." cwe="476" file0="cJSON/cJSON.c">
+            <location file="cJSON/cJSON.c" line="1497" column="9" info="Null pointer dereference"/>
+            <location file="cJSON/cJSON.c" line="1511" column="9" info="Assuming that condition &apos;input_buffer!=NULL&apos; is not redundant"/>
+            <symbol>input_buffer</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;input_buffer!=NULL&apos; is redundant or there is possible null pointer dereference: input_buffer." verbose="Either the condition &apos;input_buffer!=NULL&apos; is redundant or there is possible null pointer dereference: input_buffer." cwe="476" file0="cJSON/cJSON.c">
+            <location file="cJSON/cJSON.c" line="1501" column="5" info="Null pointer dereference"/>
+            <location file="cJSON/cJSON.c" line="1511" column="9" info="Assuming that condition &apos;input_buffer!=NULL&apos; is not redundant"/>
+            <symbol>input_buffer</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;input_buffer!=NULL&apos; is redundant or there is possible null pointer dereference: input_buffer." verbose="Either the condition &apos;input_buffer!=NULL&apos; is redundant or there is possible null pointer dereference: input_buffer." cwe="476" file0="cJSON/cJSON.c">
+            <location file="cJSON/cJSON.c" line="1503" column="9" info="Null pointer dereference"/>
+            <location file="cJSON/cJSON.c" line="1511" column="9" info="Assuming that condition &apos;input_buffer!=NULL&apos; is not redundant"/>
+            <symbol>input_buffer</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;input_buffer!=NULL&apos; is redundant or there is possible null pointer dereference: input_buffer." verbose="Either the condition &apos;input_buffer!=NULL&apos; is redundant or there is possible null pointer dereference: input_buffer." cwe="476" file0="cJSON/cJSON.c">
+            <location file="cJSON/cJSON.c" line="1509" column="5" info="Null pointer dereference"/>
+            <location file="cJSON/cJSON.c" line="1511" column="9" info="Assuming that condition &apos;input_buffer!=NULL&apos; is not redundant"/>
+            <symbol>input_buffer</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;input_buffer!=NULL&apos; is redundant or there is possible null pointer dereference: input_buffer." verbose="Either the condition &apos;input_buffer!=NULL&apos; is redundant or there is possible null pointer dereference: input_buffer." cwe="476" file0="cJSON/cJSON.c">
+            <location file="cJSON/cJSON.c" line="1520" column="9" info="Null pointer dereference"/>
+            <location file="cJSON/cJSON.c" line="1518" column="9" info="Assuming that condition &apos;input_buffer!=NULL&apos; is not redundant"/>
+            <symbol>input_buffer</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;input_buffer!=NULL&apos; is redundant or there is possible null pointer dereference: input_buffer." verbose="Either the condition &apos;input_buffer!=NULL&apos; is redundant or there is possible null pointer dereference: input_buffer." cwe="476" file0="cJSON/cJSON.c">
+            <location file="cJSON/cJSON.c" line="1657" column="9" info="Null pointer dereference"/>
+            <location file="cJSON/cJSON.c" line="1663" column="9" info="Assuming that condition &apos;input_buffer!=NULL&apos; is not redundant"/>
+            <symbol>input_buffer</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;input_buffer!=NULL&apos; is redundant or there is possible null pointer dereference: input_buffer." verbose="Either the condition &apos;input_buffer!=NULL&apos; is redundant or there is possible null pointer dereference: input_buffer." cwe="476" file0="cJSON/cJSON.c">
+            <location file="cJSON/cJSON.c" line="1661" column="5" info="Null pointer dereference"/>
+            <location file="cJSON/cJSON.c" line="1663" column="9" info="Assuming that condition &apos;input_buffer!=NULL&apos; is not redundant"/>
+            <symbol>input_buffer</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;input_buffer!=NULL&apos; is redundant or there is possible null pointer dereference: input_buffer." verbose="Either the condition &apos;input_buffer!=NULL&apos; is redundant or there is possible null pointer dereference: input_buffer." cwe="476" file0="cJSON/cJSON.c">
+            <location file="cJSON/cJSON.c" line="1668" column="5" info="Null pointer dereference"/>
+            <location file="cJSON/cJSON.c" line="1670" column="9" info="Assuming that condition &apos;input_buffer!=NULL&apos; is not redundant"/>
+            <symbol>input_buffer</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;input_buffer!=NULL&apos; is redundant or there is possible null pointer dereference: input_buffer." verbose="Either the condition &apos;input_buffer!=NULL&apos; is redundant or there is possible null pointer dereference: input_buffer." cwe="476" file0="cJSON/cJSON.c">
+            <location file="cJSON/cJSON.c" line="1678" column="9" info="Null pointer dereference"/>
+            <location file="cJSON/cJSON.c" line="1676" column="9" info="Assuming that condition &apos;input_buffer!=NULL&apos; is not redundant"/>
+            <symbol>input_buffer</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;input_buffer!=NULL&apos; is redundant or there is possible null pointer dereference: input_buffer." verbose="Either the condition &apos;input_buffer!=NULL&apos; is redundant or there is possible null pointer dereference: input_buffer." cwe="476" file0="cJSON/cJSON.c">
+            <location file="cJSON/cJSON.c" line="1683" column="5" info="Null pointer dereference"/>
+            <location file="cJSON/cJSON.c" line="1708" column="13" info="Assuming that condition &apos;input_buffer!=NULL&apos; is not redundant"/>
+            <symbol>input_buffer</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;input_buffer!=NULL&apos; is redundant or there is possible null pointer dereference: input_buffer." verbose="Either the condition &apos;input_buffer!=NULL&apos; is redundant or there is possible null pointer dereference: input_buffer." cwe="476" file0="cJSON/cJSON.c">
+            <location file="cJSON/cJSON.c" line="1714" column="9" info="Null pointer dereference"/>
+            <location file="cJSON/cJSON.c" line="1726" column="13" info="Assuming that condition &apos;input_buffer!=NULL&apos; is not redundant"/>
+            <symbol>input_buffer</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;length&apos; is assigned a value that is never used." verbose="Variable &apos;length&apos; is assigned a value that is never used." cwe="563" file0="cJSON/cJSON.c">
+            <location file="cJSON/cJSON.c" line="1593" column="19"/>
+            <symbol>length</symbol>
+        </error>
+        <error id="invalidFunctionArg" severity="error" msg="Invalid sqrt() argument nr 1. The value is -1 but the valid values are &apos;0.0:&apos;." verbose="Invalid sqrt() argument nr 1. The value is -1 but the valid values are &apos;0.0:&apos;." cwe="628" file0="cJSON/cJSON.c">
+            <location file="cJSON/cJSON.c" line="113" column="25" info="Invalid argument"/>
+            <symbol>sqrt</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;status&apos; can be reduced." verbose="The scope of the variable &apos;status&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="cJSON/cJSON_Utils.c">
+            <location file="cJSON/cJSON_Utils.c" line="1041" column="9"/>
+            <symbol>status</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;status&apos; can be reduced." verbose="The scope of the variable &apos;status&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="cJSON/cJSON_Utils.c">
+            <location file="cJSON/cJSON_Utils.c" line="1070" column="9"/>
+            <symbol>status</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;status&apos; is assigned a value that is never used." verbose="Variable &apos;status&apos; is assigned a value that is never used." cwe="563" file0="cJSON/cJSON_Utils.c">
+            <location file="cJSON/cJSON_Utils.c" line="1041" column="16"/>
+            <symbol>status</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;status&apos; is assigned a value that is never used." verbose="Variable &apos;status&apos; is assigned a value that is never used." cwe="563" file0="cJSON/cJSON_Utils.c">
+            <location file="cJSON/cJSON_Utils.c" line="1070" column="16"/>
+            <symbol>status</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;copied&apos; can be reduced." verbose="The scope of the variable &apos;copied&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="cJSON/fuzzing/cjson_read_fuzzer.c">
+            <location file="cJSON/fuzzing/cjson_read_fuzzer.c" line="17" column="20"/>
+            <symbol>copied</symbol>
+        </error>
+        <error id="resourceLeak" severity="error" msg="Resource leak: f" verbose="Resource leak: f" cwe="775" file0="cJSON/fuzzing/fuzz_main.c">
+            <location file="cJSON/fuzzing/fuzz_main.c" line="53" column="5"/>
+            <symbol>f</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 34 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="cJSON/tests/cjson_add.c" line="0" column="0"/>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;item!=NULL&apos; is redundant or there is possible null pointer dereference: item." verbose="Either the condition &apos;item!=NULL&apos; is redundant or there is possible null pointer dereference: item." cwe="476" file0="cJSON/tests/cjson_add.c">
+            <location file="cJSON/tests/common.h" line="34" column="10" info="Null pointer dereference"/>
+            <location file="cJSON/tests/common.h" line="30" column="15" info="Assuming that condition &apos;item!=NULL&apos; is not redundant"/>
+            <symbol>item</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;(null=cJSON_GetObjectItemCaseSensitive(root,&quot;null&quot;))!=NULL&apos; is redundant or there is possible null pointer dereference: null." verbose="Either the condition &apos;(null=cJSON_GetObjectItemCaseSensitive(root,&quot;null&quot;))!=NULL&apos; is redundant or there is possible null pointer dereference: null." cwe="476" file0="cJSON/tests/cjson_add.c">
+            <location file="cJSON/tests/cjson_add.c" line="56" column="5" info="Null pointer dereference"/>
+            <location file="cJSON/tests/cjson_add.c" line="55" column="5" info="Assuming that condition &apos;(null=cJSON_GetObjectItemCaseSensitive(root,&quot;null&quot;))!=NULL&apos; is not redundant"/>
+            <symbol>null</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;(true_item=cJSON_GetObjectItemCaseSensitive(root,&quot;true&quot;))!=NULL&apos; is redundant or there is possible null pointer dereference: true_item." verbose="Either the condition &apos;(true_item=cJSON_GetObjectItemCaseSensitive(root,&quot;true&quot;))!=NULL&apos; is redundant or there is possible null pointer dereference: true_item." cwe="476" file0="cJSON/tests/cjson_add.c">
+            <location file="cJSON/tests/cjson_add.c" line="92" column="5" info="Null pointer dereference"/>
+            <location file="cJSON/tests/cjson_add.c" line="91" column="5" info="Assuming that condition &apos;(true_item=cJSON_GetObjectItemCaseSensitive(root,&quot;true&quot;))!=NULL&apos; is not redundant"/>
+            <symbol>true_item</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;(false_item=cJSON_GetObjectItemCaseSensitive(root,&quot;false&quot;))!=NULL&apos; is redundant or there is possible null pointer dereference: false_item." verbose="Either the condition &apos;(false_item=cJSON_GetObjectItemCaseSensitive(root,&quot;false&quot;))!=NULL&apos; is redundant or there is possible null pointer dereference: false_item." cwe="476" file0="cJSON/tests/cjson_add.c">
+            <location file="cJSON/tests/cjson_add.c" line="172" column="5" info="Null pointer dereference"/>
+            <location file="cJSON/tests/cjson_add.c" line="171" column="5" info="Assuming that condition &apos;(false_item=cJSON_GetObjectItemCaseSensitive(root,&quot;false&quot;))!=NULL&apos; is not redundant"/>
+            <symbol>false_item</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;(true_item=cJSON_GetObjectItemCaseSensitive(root,&quot;true&quot;))!=NULL&apos; is redundant or there is possible null pointer dereference: true_item." verbose="Either the condition &apos;(true_item=cJSON_GetObjectItemCaseSensitive(root,&quot;true&quot;))!=NULL&apos; is redundant or there is possible null pointer dereference: true_item." cwe="476" file0="cJSON/tests/cjson_add.c">
+            <location file="cJSON/tests/cjson_add.c" line="209" column="5" info="Null pointer dereference"/>
+            <location file="cJSON/tests/cjson_add.c" line="208" column="5" info="Assuming that condition &apos;(true_item=cJSON_GetObjectItemCaseSensitive(root,&quot;true&quot;))!=NULL&apos; is not redundant"/>
+            <symbol>true_item</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;(false_item=cJSON_GetObjectItemCaseSensitive(root,&quot;false&quot;))!=NULL&apos; is redundant or there is possible null pointer dereference: false_item." verbose="Either the condition &apos;(false_item=cJSON_GetObjectItemCaseSensitive(root,&quot;false&quot;))!=NULL&apos; is redundant or there is possible null pointer dereference: false_item." cwe="476" file0="cJSON/tests/cjson_add.c">
+            <location file="cJSON/tests/cjson_add.c" line="214" column="5" info="Null pointer dereference"/>
+            <location file="cJSON/tests/cjson_add.c" line="213" column="5" info="Assuming that condition &apos;(false_item=cJSON_GetObjectItemCaseSensitive(root,&quot;false&quot;))!=NULL&apos; is not redundant"/>
+            <symbol>false_item</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;(number=cJSON_GetObjectItemCaseSensitive(root,&quot;number&quot;))!=NULL&apos; is redundant or there is possible null pointer dereference: number." verbose="Either the condition &apos;(number=cJSON_GetObjectItemCaseSensitive(root,&quot;number&quot;))!=NULL&apos; is redundant or there is possible null pointer dereference: number." cwe="476" file0="cJSON/tests/cjson_add.c">
+            <location file="cJSON/tests/cjson_add.c" line="251" column="5" info="Null pointer dereference"/>
+            <location file="cJSON/tests/cjson_add.c" line="249" column="5" info="Assuming that condition &apos;(number=cJSON_GetObjectItemCaseSensitive(root,&quot;number&quot;))!=NULL&apos; is not redundant"/>
+            <symbol>number</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;(number=cJSON_GetObjectItemCaseSensitive(root,&quot;number&quot;))!=NULL&apos; is redundant or there is possible null pointer dereference: number." verbose="Either the condition &apos;(number=cJSON_GetObjectItemCaseSensitive(root,&quot;number&quot;))!=NULL&apos; is redundant or there is possible null pointer dereference: number." cwe="476" file0="cJSON/tests/cjson_add.c">
+            <location file="cJSON/tests/cjson_add.c" line="252" column="5" info="Null pointer dereference"/>
+            <location file="cJSON/tests/cjson_add.c" line="249" column="5" info="Assuming that condition &apos;(number=cJSON_GetObjectItemCaseSensitive(root,&quot;number&quot;))!=NULL&apos; is not redundant"/>
+            <symbol>number</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;(number=cJSON_GetObjectItemCaseSensitive(root,&quot;number&quot;))!=NULL&apos; is redundant or there is possible null pointer dereference: number." verbose="Either the condition &apos;(number=cJSON_GetObjectItemCaseSensitive(root,&quot;number&quot;))!=NULL&apos; is redundant or there is possible null pointer dereference: number." cwe="476" file0="cJSON/tests/cjson_add.c">
+            <location file="cJSON/tests/cjson_add.c" line="253" column="5" info="Null pointer dereference"/>
+            <location file="cJSON/tests/cjson_add.c" line="249" column="5" info="Assuming that condition &apos;(number=cJSON_GetObjectItemCaseSensitive(root,&quot;number&quot;))!=NULL&apos; is not redundant"/>
+            <symbol>number</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;(string=cJSON_GetObjectItemCaseSensitive(root,&quot;string&quot;))!=NULL&apos; is redundant or there is possible null pointer dereference: string." verbose="Either the condition &apos;(string=cJSON_GetObjectItemCaseSensitive(root,&quot;string&quot;))!=NULL&apos; is redundant or there is possible null pointer dereference: string." cwe="476" file0="cJSON/tests/cjson_add.c">
+            <location file="cJSON/tests/cjson_add.c" line="289" column="5" info="Null pointer dereference"/>
+            <location file="cJSON/tests/cjson_add.c" line="288" column="5" info="Assuming that condition &apos;(string=cJSON_GetObjectItemCaseSensitive(root,&quot;string&quot;))!=NULL&apos; is not redundant"/>
+            <symbol>string</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;(string=cJSON_GetObjectItemCaseSensitive(root,&quot;string&quot;))!=NULL&apos; is redundant or there is possible null pointer dereference: string." verbose="Either the condition &apos;(string=cJSON_GetObjectItemCaseSensitive(root,&quot;string&quot;))!=NULL&apos; is redundant or there is possible null pointer dereference: string." cwe="476" file0="cJSON/tests/cjson_add.c">
+            <location file="cJSON/tests/cjson_add.c" line="290" column="5" info="Null pointer dereference"/>
+            <location file="cJSON/tests/cjson_add.c" line="288" column="5" info="Assuming that condition &apos;(string=cJSON_GetObjectItemCaseSensitive(root,&quot;string&quot;))!=NULL&apos; is not redundant"/>
+            <symbol>string</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;(raw=cJSON_GetObjectItemCaseSensitive(root,&quot;raw&quot;))!=NULL&apos; is redundant or there is possible null pointer dereference: raw." verbose="Either the condition &apos;(raw=cJSON_GetObjectItemCaseSensitive(root,&quot;raw&quot;))!=NULL&apos; is redundant or there is possible null pointer dereference: raw." cwe="476" file0="cJSON/tests/cjson_add.c">
+            <location file="cJSON/tests/cjson_add.c" line="326" column="5" info="Null pointer dereference"/>
+            <location file="cJSON/tests/cjson_add.c" line="325" column="5" info="Assuming that condition &apos;(raw=cJSON_GetObjectItemCaseSensitive(root,&quot;raw&quot;))!=NULL&apos; is not redundant"/>
+            <symbol>raw</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;(raw=cJSON_GetObjectItemCaseSensitive(root,&quot;raw&quot;))!=NULL&apos; is redundant or there is possible null pointer dereference: raw." verbose="Either the condition &apos;(raw=cJSON_GetObjectItemCaseSensitive(root,&quot;raw&quot;))!=NULL&apos; is redundant or there is possible null pointer dereference: raw." cwe="476" file0="cJSON/tests/cjson_add.c">
+            <location file="cJSON/tests/cjson_add.c" line="327" column="5" info="Null pointer dereference"/>
+            <location file="cJSON/tests/cjson_add.c" line="325" column="5" info="Assuming that condition &apos;(raw=cJSON_GetObjectItemCaseSensitive(root,&quot;raw&quot;))!=NULL&apos; is not redundant"/>
+            <symbol>raw</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;(object=cJSON_GetObjectItemCaseSensitive(root,&quot;object&quot;))!=NULL&apos; is redundant or there is possible null pointer dereference: object." verbose="Either the condition &apos;(object=cJSON_GetObjectItemCaseSensitive(root,&quot;object&quot;))!=NULL&apos; is redundant or there is possible null pointer dereference: object." cwe="476" file0="cJSON/tests/cjson_add.c">
+            <location file="cJSON/tests/cjson_add.c" line="362" column="5" info="Null pointer dereference"/>
+            <location file="cJSON/tests/cjson_add.c" line="361" column="5" info="Assuming that condition &apos;(object=cJSON_GetObjectItemCaseSensitive(root,&quot;object&quot;))!=NULL&apos; is not redundant"/>
+            <symbol>object</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;(array=cJSON_GetObjectItemCaseSensitive(root,&quot;array&quot;))!=NULL&apos; is redundant or there is possible null pointer dereference: array." verbose="Either the condition &apos;(array=cJSON_GetObjectItemCaseSensitive(root,&quot;array&quot;))!=NULL&apos; is redundant or there is possible null pointer dereference: array." cwe="476" file0="cJSON/tests/cjson_add.c">
+            <location file="cJSON/tests/cjson_add.c" line="397" column="5" info="Null pointer dereference"/>
+            <location file="cJSON/tests/cjson_add.c" line="396" column="5" info="Assuming that condition &apos;(array=cJSON_GetObjectItemCaseSensitive(root,&quot;array&quot;))!=NULL&apos; is not redundant"/>
+            <symbol>array</symbol>
+        </error>
+        <error id="preprocessorErrorDirective" severity="error" msg="failed to expand &apos;RUN_TEST&apos;, Wrong number of parameters for macro &apos;RUN_TEST&apos;." verbose="failed to expand &apos;RUN_TEST&apos;, Wrong number of parameters for macro &apos;RUN_TEST&apos;.">
+            <location file="cJSON/tests/cjson_add.c" line="429" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;UNITY_INCLUDE_SETUP_STUBS;UNITY_WEAK_ATTRIBUTE&apos; since the value of &apos;UNITY_WEAK_ATTRIBUTE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;UNITY_INCLUDE_SETUP_STUBS;UNITY_WEAK_ATTRIBUTE&apos; since the value of &apos;UNITY_WEAK_ATTRIBUTE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="cJSON/tests/unity/src/unity.h" line="39" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;UNITY_INCLUDE_SETUP_STUBS;UNITY_WEAK_ATTRIBUTE&apos; since the value of &apos;UNITY_WEAK_ATTRIBUTE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;UNITY_INCLUDE_SETUP_STUBS;UNITY_WEAK_ATTRIBUTE&apos; since the value of &apos;UNITY_WEAK_ATTRIBUTE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="cJSON/tests/unity/src/unity.h" line="40" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;UNITY_INCLUDE_SETUP_STUBS;UNITY_WEAK_ATTRIBUTE&apos; since the value of &apos;UNITY_WEAK_ATTRIBUTE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;UNITY_INCLUDE_SETUP_STUBS;UNITY_WEAK_ATTRIBUTE&apos; since the value of &apos;UNITY_WEAK_ATTRIBUTE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="cJSON/tests/unity/src/unity.h" line="41" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;UNITY_INCLUDE_SETUP_STUBS;UNITY_WEAK_ATTRIBUTE&apos; since the value of &apos;UNITY_WEAK_ATTRIBUTE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;UNITY_INCLUDE_SETUP_STUBS;UNITY_WEAK_ATTRIBUTE&apos; since the value of &apos;UNITY_WEAK_ATTRIBUTE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="cJSON/tests/unity/src/unity.h" line="42" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 34 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="cJSON/tests/compare_tests.c" line="0" column="0"/>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;(raw2)!=NULL&apos; is redundant or there is possible null pointer dereference: raw2." verbose="Either the condition &apos;(raw2)!=NULL&apos; is redundant or there is possible null pointer dereference: raw2." cwe="476" file0="cJSON/tests/compare_tests.c">
+            <location file="cJSON/tests/compare_tests.c" line="132" column="5" info="Null pointer dereference"/>
+            <location file="cJSON/tests/compare_tests.c" line="129" column="5" info="Assuming that condition &apos;(raw2)!=NULL&apos; is not redundant"/>
+            <symbol>raw2</symbol>
+        </error>
+        <error id="preprocessorErrorDirective" severity="error" msg="failed to expand &apos;RUN_TEST&apos;, Wrong number of parameters for macro &apos;RUN_TEST&apos;." verbose="failed to expand &apos;RUN_TEST&apos;, Wrong number of parameters for macro &apos;RUN_TEST&apos;.">
+            <location file="cJSON/tests/compare_tests.c" line="196" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 34 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="cJSON/tests/json_patch_tests.c" line="0" column="0"/>
+        </error>
+        <error id="preprocessorErrorDirective" severity="error" msg="failed to expand &apos;RUN_TEST&apos;, Wrong number of parameters for macro &apos;RUN_TEST&apos;." verbose="failed to expand &apos;RUN_TEST&apos;, Wrong number of parameters for macro &apos;RUN_TEST&apos;.">
+            <location file="cJSON/tests/json_patch_tests.c" line="238" column="0"/>
+        </error>
