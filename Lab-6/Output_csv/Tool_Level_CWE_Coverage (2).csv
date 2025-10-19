@@ -1,0 +1,4 @@
+Tool,Unique_CWEs,Top25_CWEs,Top25_Coverage_%
+Bandit,14,7,28.000000000000004
+Cppcheck,14,1,4.0
+Semgrep,23,10,40.0
